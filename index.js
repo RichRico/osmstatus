@@ -37,11 +37,11 @@ function init(pbfFile) {
 
   handlerC.on("done", function () {
     //print result
-    console.log(`tag,total,area,distace`);
+    console.log(`nameArea,tag,total,area,distace`);
     _.each(counter, function (val, key) {
-      console.log(`${key}, ${val.total},${val.area.toFixed(2)},${val.distance.toFixed(2)}`);
+      console.log(`${pbfFile},${key}, ${val.total},${val.area.toFixed(2)},${val.distance.toFixed(2)}`);
       _.each(val.type, function (v, k) {
-        console.log(`${key}:${k}, ${v.total},${v.area.toFixed(2)},${v.distance.toFixed(2)}`);
+        console.log(`${pbfFile},${key}:${k}, ${v.total},${v.area.toFixed(2)},${v.distance.toFixed(2)}`);
       });
     });
   });
